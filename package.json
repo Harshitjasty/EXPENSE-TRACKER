@@ -1,0 +1,52 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.ts",
+  "scripts": {
+    "dev": "concurrently --names \"SERVER,CLIENT\" --prefix \"[{name}]\" --prefix-colors \"yellow,blue\" \"npm run server\" \"npm run client\"",
+    "format": "prettier --write \"frontend/**/*.{ts,tsx,css,md,json}\" && prettier --write \"backend/**/*.{ts,tsx,json}\"",
+    "client": "npm run dev --prefix frontend",
+    "server": "nodemon backend/server.ts",
+    "build": "tsc --build backend",
+    "start": "node /backend/dist/server.js"
+  },
+  "keywords": [],
+  "author": "github.com/maciekt07",
+  "license": "MIT",
+  "paths": {
+    "@shared/*": [
+      "shared/*"
+    ]
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.14.11",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@types/papaparse": "^5.3.15",
+    "bcrypt": "^5.1.1",
+    "chart.js": "^4.4.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "js": "^0.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "papaparse": "^5.5.2",
+    "react-chartjs-2": "^5.3.0"
+  }
+}
